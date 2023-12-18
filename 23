@@ -8,21 +8,21 @@ libinput libliftoff libdisplay-info cpio tomlplusplus nodejs go libnotify ffmpeg
 thunar-archive-plugin grimblast-git \
 xdg-utils xdg-desktop-portal xdg-desktop-portal-hyprland \
 xdg-desktop-portal-wlr xdg-desktop-portal-gtk xdg-user-dirs \
-hyprland-git eww-wayland libnotify libcanberra \
+hyprland-git libnotify libcanberra \
 hyprpaper swayidle swaylock-effects-git neofetch duf \
 wl-clipboard cliphist pulsemixer myxer-bin light jaq \
 networkmanager sound-theme-freedesktop socat jo jq \
-rofi-lbonn-wayland dunst trayer mpvpaper macchina \
-nitch socat geticons fuzzel dolphin foot kitty \
-alacritty nano waybar-hyprland pamixer starship bluez \
+rofi-lbonn-wayland-git dunst trayer mpvpaper macchina \
+nitch socat geticons fuzzel foot kitty \
+alacritty nano waybar-hyprland-git pamixer starship bluez \
 wofi fuzzel mako wlogout thunar swaylock-effects swww \
 python-requests tk zenity yad mpd mpc ncmpcpp batify \
 swaync pipewire wireplumber cliphist wl-clipboard clipman \
-swww vim neovim neovide nwg-look python tk python-rich \
+vim neovim neovide nwg-look python tk python-rich \
 python-pyperclip python-pipx python-pip aconfmgr-git jo jq \
-gtk-2 gtk3 gtk4 gtk-layer-shell gtk4-layer-shell waybar-hyprland-git \
-eww-wayland aylurs-gtk-shell mpv mpd vlc notepadqq visual-studio-code-bin \
-geany geany-plugins kvantum google-chrome stacer-bin \
+gtk-2 gtk3 gtk4 gtk-layer-shell gtk4-layer-shell  \
+mpv mpd vlc notepadqq visual-studio-code-bin \
+geany geany-plugins google-chrome stacer-bin \
 rofi-lbonn-wayland-git deadd-notification-center polkit-kde-agent \
 ttf-anonymouspro-nerd ttf-jetbrains-mono-nerd \
 ttf-ubuntu-nerd ttf-meslo-nerd papirus-icon-theme \
@@ -42,12 +42,18 @@ if [[ $CFG =~ ^[Yy]$ ]]; then
     cp -r dotconfig/pipewire ~/.config/ 2>&1 | tee -a $LOG
     cp -r dotconfig/mpv ~/.config/ 2>&1 | tee -a $LOG
          cp -r dotconfig/rofi ~/.config/ 2>&1 | tee -a $LOG
+         cp -r dotconfig/alacritty ~/.config/ 2>&1 | tee -a $LOG
     cp -r dotconfig/swaylock ~/.config/ 2>&1 | tee -a $LOG
     cp -r dotconfig/waybar ~/.config/ 2>&1 | tee -a $LOG
     cp -r dotconfig/wlogout ~/.config/ 2>&1 | tee -a $LOG
     # Add other cp commands for config files as needed
     chmod +x ~/.config/hypr/xdg-portal-hyprland
     chmod +x ~/.config/waybar/scripts/waybar-wttr.py
+    cp -r dotconfig/qt5ct ~/.config/ 2>&1 | tee -a $LOG
+    cp -r dotconfig/qt6ct ~/.config/ 2>&1 | tee -a $LOG
+
+
+
 fi
 
 # GIT
